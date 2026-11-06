@@ -81,7 +81,15 @@ var speed = 10;
          */
         function update() {
 positionX += speed;
-moveBoxTo(positionX);       
+if(positionX + box.width()>= boardWidth){
+  positionX = boardWidth - box.width();
+  speed = -Math.abs(speed);
+}
+if(positionX <= 0){
+  positionX = 0;
+  speed = Math.abs(speed);
+}
+moveBoxTo(positionX);
 
           
         }
@@ -97,7 +105,8 @@ moveBoxTo(positionX);
 positionX = 0;
 points++;
 changeBoxText(points);
-speed +=3;
+speed = Math.abs(speed) +3;
+moveBoxTo(position);
         }
 
 
