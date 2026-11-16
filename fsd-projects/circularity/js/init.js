@@ -87,7 +87,7 @@ for (var i = 0; i < 50; i++){
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            game.checkCirclePosition = function(circle) {
+            
 
 if (circle.x - circle.radius > canvas.width) {
 circle.x = -circle.radius;
