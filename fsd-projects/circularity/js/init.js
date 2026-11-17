@@ -87,6 +87,7 @@ for (var i = 0; i < 50; i++){
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
+            
 
 if (circle.x + circle.radius < 0) {
 circle.x = canvas.width + circle.radius;
