@@ -37,7 +37,6 @@ var circles = [ ];
         drawCircle();
         drawCircle();
         drawCircle();
-        drawCircle();
 
 
 
@@ -89,10 +88,6 @@ for (var i = 0; i < 50; i++){
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
 
-if (circle.x - circle.radius > canvas.width) {
-circle.x = -circle.radius;
-}
-
 if (circle.x + circle.radius < 0) {
 circle.x = canvas.width + circle.radius;
 }
@@ -123,8 +118,7 @@ circle.y = -circle.radius;
         game.update = update;
         
         app.addUpdateable(window.opspark.game);
-    }
-};
+    };
 
 // DO NOT REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
