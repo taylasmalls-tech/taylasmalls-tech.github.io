@@ -20,7 +20,7 @@ var init = function (window) {
         ///////////////////
         
         // TODO 1 : Declare and initialize our variables
-var circles = [ ]; 
+var circles = []; 
 
 
         // TODO 2 : Create a function that draws a circle 
@@ -34,10 +34,9 @@ var circles = [ ];
 
         // TODO 3 : Call the drawCircle() function
         drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-
+          drawCircle();
+            drawCircle();
+              drawCircle();
 
 
         // TODO 7 : Use a loop to create multiple circles
@@ -81,13 +80,14 @@ for (var i = 0; i < 50; i++){
         game.checkCirclePosition = function(circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) {
-                circle.x = 0;
-            }
+            
+            
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            
-            
+
+if (circle.x > canvas.width) {
+circle.x = 0;
+}
 
 if (circle.x + circle.radius < 0) {
 circle.x = canvas.width + circle.radius;
@@ -96,12 +96,14 @@ circle.x = canvas.width + circle.radius;
 if (circle.y + circle.radius < 0) {
 circle.y = canvas.height + circle.radius;
 }
-
+ 
 if (circle.y - circle.radius > canvas.height) {
 circle.y = -circle.radius;
 }
+            
 
-};
+
+        };
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
